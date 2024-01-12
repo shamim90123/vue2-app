@@ -1,10 +1,10 @@
 version: '3'
 services:
-  vue-app:
+  my-vue2-app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8010:8080"
+      - "8080:8080"
     volumes:
-      - .:/app
+      - ./src:/app/src  # Optional: if you want to mount the source code for live changes

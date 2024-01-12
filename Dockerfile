@@ -1,7 +1,7 @@
-# Use an official Node.js runtime as a base image
+# Use the official Node.js image as the base image
 FROM node:14
 
-# Set the working directory in the container
+# Set the working directory to /app
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
@@ -13,11 +13,8 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Build the Vue.js application
-# RUN npm run build
-
-# Expose the port the app runs on
+# Expose port 8080 for the Vue.js app
 EXPOSE 8080
 
-# Define the command to run your application
+# Command to run the application
 CMD ["npm", "run", "serve"]
