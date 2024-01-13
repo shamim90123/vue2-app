@@ -1,0 +1,8 @@
+version: '3'
+services:
+  my-vue2-app:
+    image: shamim901/vue2-app:tagname  # Use the Docker image from Docker Hub
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/app/src  # Optional: if you want to mount the source code for live changes
